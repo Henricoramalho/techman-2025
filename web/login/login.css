@@ -1,94 +1,82 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: #d9f0f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  text-align: center;
-}
-
-.logo {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2a7c82;
-  letter-spacing: 3px;
-}
-
-.logo-box {
-  background: #2fc1c7;
-  color: white;
-  padding: 5px 10px;
-  margin-right: 5px;
-}
-
-.keypad-container {
-  background: white;
-  padding: 25px;
-  border-radius: 6px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  display: inline-block;
-}
-
-.display {
-  font-size: 1.5rem;
-  border-bottom: 2px solid #2a7c82;
-  margin-bottom: 15px;
-  padding: 5px;
-  letter-spacing: 5px;
-  text-align: center;
-  height: 30px;
-}
-
-.keypad {
-  display: grid;
-  grid-template-columns: repeat(3, 60px);
-  grid-gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.keypad button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid #2fc1c7;
-  background: white;
-  font-size: 1.2rem;
-  color: #2a7c82;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.keypad button:hover {
-  background: #2fc1c7;
-  color: white;
-}
-
-.keypad .backspace {
-  font-size: 1.5rem;
-}
-
-.send {
-  background: #2fc1c7;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.send:hover {
-  background: #23989c;
-}
+            background: #d4eef3;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            margin-top: 32px;
+            text-align: center;
+        }
+        .logo-bg {
+            background: #32c6d1;
+            display: inline-block;
+            padding: 12px 14px 10px 14px;
+            border-radius: 2px;
+        }
+        .logo-text {
+            color: white;
+            font-size: 38px;
+            letter-spacing: 13px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+        .logo-man {
+            color: #39949e;
+            font-size: 38px;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin-left: 2px;
+            position: relative;
+            top: 0px;
+        }
+        .container {
+            background: white;
+            width: 320px;
+            margin: 40px auto 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 0 9px rgba(0,0,0,0.08);
+            text-align: center;
+            padding: 36px 20px;
+        }
+        .input-display {
+            font-size: 25px;
+            letter-spacing: 10px;
+            margin-bottom: 14px;
+            margin-top: 0;
+            border-bottom: 2px solid #b2d7de;
+            padding-bottom: 8px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 36px;
+            user-select: none;
+            font-family: monospace;
+        }
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 68px);
+            grid-gap: 16px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .btn {
+            border: 2px solid #32c6d1;
+            background: transparent;
+            color: #39949e;
+            font-size: 26px;
+            border-radius: 50%;
+            width: 58px;
+            height: 58px;
+            margin: auto;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            user-select: none;
+        }
+        .btn:active {
+            background: #39949e;
+            color: white;
+        }
+        .btn.special {
+            font-size: 20px;
+        }

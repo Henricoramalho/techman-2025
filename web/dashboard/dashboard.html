@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMan - Equipamentos</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <img src="assets/techman.png" alt="Logo TECHMAN" style="max-width: 200px; height: auto;">
+        <nav>    
+            <a href="#" id="abrir-novo-equip" class="btn-header">Novo Equipamento</a>
+            <a href="../login/login.html"><img src="assets/logout_sair.png" alt=""></a>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="lista-equipamento"></div>
+
+        <div id="modal" style="display:none">
+            <div id="detalhes"></div>
+            <button id="fechar-modal">Fechar</button>
+        </div>
+
+        <div id="modal-novo-equip" style="display:none;">
+  <div class="modal-content">
+    <button class="fechar-btn" id="fechar-novo-equip">&times;</button>
+    <h2>Novo Equipamento</h2>
+    <form id="form-novo-equip">
+      <input type="text" id="novo-nome" placeholder="Nome">
+      <input type="url" id="novo-imagem" placeholder="URL da imagem">
+      <textarea id="novo-descricao" placeholder="Descrição"></textarea>
+      <label class="checkbox-label">
+        <input type="checkbox" id="novo-ativo" checked> Ativo
+      </label>
+      <button type="submit" id="btn-enviar-novo">Adicionar</button>
+    </form>
+  </div>
+</div>
+
+    </main>
+
+</body>
+<script src="dashboard.js"></script>
+</html>

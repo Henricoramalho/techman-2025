@@ -1,0 +1,322 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background-color: #cce2e2;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #39949e;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+#equipamentos-list {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.equipamento-box {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    gap: 16px;
+}
+
+.equipamento-img {
+    width: 160px;
+    height: auto;
+    border: 1px solid #aaa;
+    padding: 4px;
+    background: #fff;
+}
+
+.equipamento-info {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.equipamento-titulo {
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.equipamento-desc {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.equipamento-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.equipamento-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.equipamento-actions button img {
+    width: 20px;
+    height: 20px;
+    filter: invert(0.3);
+}
+
+.equipamento-actions button:hover img {
+    filter: invert(0);
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  width: 600px;
+  max-width: 95%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: none;
+  font-family: Arial, sans-serif;
+}
+
+#modal h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #39949e;
+}
+
+#modal p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#modal img {
+  display: block;
+  margin: 10px auto;
+  max-height: 200px;
+  border-radius: 6px;
+}
+
+#fechar-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+#fechar-modal:hover {
+  color: #000;
+}
+
+.lista-comentarios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comentario-item {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.comentario-item p {
+  margin: 4px 0;
+  color: #444;
+}
+
+#form-comentario {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#form-comentario label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+#comentario-texto {
+  resize: vertical;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+#comentario-texto:focus {
+  border-color: #39949e;
+  box-shadow: 0 0 3px rgba(57,148,158,0.3);
+}
+
+#comentario-perfil {
+  width: 150px;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
+
+#btn-enviar-comentario {
+  padding: 8px 14px;
+  background: #39949e;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#btn-enviar-comentario:hover {
+  background: #2f7c84;
+}
+
+.comentario-item .deletar-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s, opacity 0.2s;
+    opacity: 0.7;
+}
+
+.comentario-item .deletar-btn:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.comentario-item .deletar-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+#modal-novo-equip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-novo-equip .modal-content {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+#modal-novo-equip h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #333;
+}
+
+#modal-novo-equip input[type="text"],
+#modal-novo-equip input[type="url"],
+#modal-novo-equip textarea,
+#modal-novo-equip input[type="number"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+#modal-novo-equip textarea {
+  resize: vertical;
+}
+
+#modal-novo-equip label.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95em;
+  margin-bottom: 12px;
+}
+
+#modal-novo-equip input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+#modal-novo-equip button {
+  padding: 8px 15px;
+  background-color: #6c5ce7;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#modal-novo-equip button:hover {
+  background-color: #5649c0;
+}
+
+#modal-novo-equip .fechar-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  color: #333;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}
