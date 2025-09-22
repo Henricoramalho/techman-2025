@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #d9f0f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2a7c82;
+  letter-spacing: 3px;
+}
+
+.logo-box {
+  background: #2fc1c7;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.keypad-container {
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+.display {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #2a7c82;
+  margin-bottom: 15px;
+  padding: 5px;
+  letter-spacing: 5px;
+  text-align: center;
+  height: 30px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.keypad button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #2fc1c7;
+  background: white;
+  font-size: 1.2rem;
+  color: #2a7c82;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.keypad button:hover {
+  background: #2fc1c7;
+  color: white;
+}
+
+.keypad .backspace {
+  font-size: 1.5rem;
+}
+
+.send {
+  background: #2fc1c7;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.send:hover {
+  background: #23989c;
+}
