@@ -10,51 +10,44 @@ const comentariosData = fs.readFileSync('./prisma/comentarios.csv', 'utf8');
 
 async function main() {
     //Extraindo de strings para arrays de objetos ignorando o primeiro elemento que é o cabeçalho
-    const perfis = await perfisData.split('\r\n').map((cliente, i) => {
-        if (i !== 0) {
-            const [id, perfil] = cliente.split(';');
-            return {
-                id: Number(id),
-                perfil
-            }
+    const perfis = await perfisData.split('\r\n').map((linha, i) => {
+        const [id, perfil] = linha.split(';');
+        return {
+            id: Number(id),
+            perfil
         }
     });
     //Extraindo de strings para arrays de objetos ignorando o primeiro elemento que é o cabeçalho
-    const usuarios = await usuariosData.split('\r\n').map((automovel, i) => {
-        if (i !== 0) {
-            const [id, senha, perfil] = automovel.split(';');
-            return {
-                id: Number(id),
-                senha,
-                perfil: Number(perfil)
-            }
+    const usuarios = await usuariosData.split('\r\n').map((linha, i) => {
+        const [id, senha, perfil] = linha.split(';');
+        return {
+            id: Number(id),
+            senha,
+            perfil: Number(perfil)
+        }
+
+    });
+    //Extraindo de strings para arrays de objetos ignorando o primeiro elemento que é o cabeçalho
+    const equipamentos = equipamentosData.split('\r\n').map((linha, i) => {
+        const [id, equipamento, imagem, descricao, ativo, data] = linha.split(';');
+        return {
+            id: Number(id),
+            equipamento,
+            imagem,
+            descricao,
+            ativo: Number(ativo),
+            data: new Date(data)
         }
     });
     //Extraindo de strings para arrays de objetos ignorando o primeiro elemento que é o cabeçalho
-    const equipamentos = equipamentosData.split('\r\n').map((concess, i) => {
-        if (i !== 0) {
-            const [id, equipamento, imagem, descricao, ativo, data] = concess.split(';');
-            return {
-                id: Number(id),
-                equipamento,
-                imagem,
-                descricao,
-                ativo: Number(ativo),
-                data: new Date(data)
-            }
-        }
-    });
-    //Extraindo de strings para arrays de objetos ignorando o primeiro elemento que é o cabeçalho
-    const comentarios = comentariosData.split('\r\n').map((alocacao, i) => {
-        if (i !== 0) {
-            const [id, comentario, equipamento, perfil, data] = alocacao.split(';');
-            return {
-                id: Number(id),
-                comentario,
-                equipamento: Number(equipamento),
-                perfil: Number(perfil),
-                data: new Date(data)
-            }
+    const comentarios = comentariosData.split('\r\n').map((linha, i) => {
+        const [id, comentario, equipamento, perfil, data] = linha.split(';');
+        return {
+            id: Number(id),
+            comentario,
+            equipamento: Number(equipamento),
+            perfil: Number(perfil),
+            data: new Date(data)
         }
     });
 

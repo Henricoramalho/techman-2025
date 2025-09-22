@@ -9,7 +9,7 @@ datasource db {
 
 model Perfil {
   id          Int          @id @default(autoincrement())
-  perfil        String       @db.VarChar(50)
+  perfil      String       @db.VarChar(50)
   usuarios    Usuario[]
   comentarios Comentario[]
 }
@@ -37,6 +37,6 @@ model Comentario {
   equipamento Int
   perfil      Int
   data        DateTime    @default(now())
-  faz     Perfil      @relation(fields: [perfil], references: [id])
+  faz         Perfil      @relation(fields: [perfil], references: [id])
   recebe      Equipamento @relation(fields: [equipamento], references: [id], onDelete: Cascade)
 }

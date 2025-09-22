@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./assets/icone.png" type="image/x-icon">
+    <title>TechMan</title>
+</head>
+
+<body>
+    <header><img src="./assets/techman.png" alt="TechMan"></header>
+    <main>
+        <form class="login" id="login">
+            <input type="text" name="mascara" id="mascara" readonly>
+            <input type="hidden" name="pin" id="pin">
+            <div class="teclado">
+                <button onclick="add(1)">1</button>
+                <button onclick="add(2)">2</button>
+                <button onclick="add(3)">3</button>
+                <button onclick="add(4)">4</button>
+                <button onclick="add(5)">5</button>
+                <button onclick="add(6)">6</button>
+                <button onclick="add(7)">7</button>
+                <button onclick="add(8)">8</button>
+                <button onclick="add(9)">9</button>
+                <button onclick="remove()">C</button>
+                <button onclick="add(0)">0</button>
+                <button id="send" onclick="enviar()" disabled>&crarr;</button>
+            </div>
+        </form>
+    </main>
+</body>
+<script src="index.js">
+</script>
+</html>
